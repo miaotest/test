@@ -17,3 +17,9 @@ class LoginPage(BasePage):
 
     def click_confirm(self):  # 登录提示消息确认
         self.click_func(self.find_element_func(page.confirm_btn))
+
+    def login_func(self, user, pwd):
+        self.input_user(user)
+        self.input_pwd(pwd)
+        self.click_login()
+        self.click_confirm()
